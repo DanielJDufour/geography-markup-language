@@ -1,0 +1,44 @@
+{
+  "name": "geography-markup-language",
+  "version": "0.0.0",
+  "description": "Parse OGC Geography Markup Language in Pure JavaScript",
+  "type": "module",
+  "files": [
+    "enums/",
+    "find/",
+    "geometry/",
+    "parse/",
+    "utils/",
+    "index.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "format": "npx prettier --arrow-parens=avoid --print-width=200 --trailing-comma=none --write *.js */*.js */*/*.js",
+    "test": "node ./test/test.find.js && node ./test/test.js && node ./test/test.geometry.js && node ./test/test.examples.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJDufour/geography-markup-language.git"
+  },
+  "keywords": [
+    "geography",
+    "geospatial",
+    "gis",
+    "gml",
+    "ogc",
+    "xml"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/DanielJDufour/geography-markup-language/issues"
+  },
+  "homepage": "https://github.com/DanielJDufour/geography-markup-language#readme",
+  "devDependencies": {
+    "flug": "^2.6.0"
+  },
+  "dependencies": {
+    "bbox-fns": "^0.6.0",
+    "xml-utils": "^1.3.0"
+  }
+}
