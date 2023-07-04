@@ -1,6 +1,6 @@
 {
   "name": "geography-markup-language",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "description": "Parse OGC Geography Markup Language in Pure JavaScript",
   "type": "module",
   "files": [
