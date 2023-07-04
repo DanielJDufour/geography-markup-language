@@ -4,6 +4,7 @@
   "description": "Parse OGC Geography Markup Language in Pure JavaScript",
   "type": "module",
   "files": [
+    "dist/",
     "enums/",
     "find/",
     "geometry/",
@@ -11,8 +12,13 @@
     "utils/",
     "index.js"
   ],
-  "main": "index.js",
+  "main": "./dist/geography-markup-language.cjs",
+  "jsdelivr": "./dist/geography-markup-language.min.js",
+  "unpkg": "./dist/geography-markup-language.min.js",
   "scripts": {
+    "build": "npm run build:browser && npm run build:node",
+    "build:browser": "esbuild index.js --bundle --keep-names --minify --outfile=./dist/geography-markup-language.min.js --platform=browser --sourcemap",
+    "build:node": "esbuild index.js --bundle --outfile=./dist/geography-markup-language.cjs --platform=node",
     "format": "npx prettier --arrow-parens=avoid --print-width=200 --trailing-comma=none --write *.js */*.js */*/*.js",
     "test": "node ./test/test.find.js && node ./test/test.js && node ./test/test.geometry.js && node ./test/test.examples.js"
   },
@@ -35,6 +41,7 @@
   },
   "homepage": "https://github.com/DanielJDufour/geography-markup-language#readme",
   "devDependencies": {
+    "esbuild": "^0.18.11",
     "flug": "^2.6.0"
   },
   "dependencies": {
